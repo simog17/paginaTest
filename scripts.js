@@ -2,7 +2,7 @@ const content = document.getElementById('content')
 fetch("https://fakerestapi.azurewebsites.net/api/Books")
 .then(res => res.json())
 .then(data => content.innerHTML = data.slice(0 , 10).reduce((acc, e) => {
-  acc += `<article><h1> ${e.Title} </h1><p> ${e.Description} </p> </article>`
+  acc += `<article><h2><span> ${e.Title} </span></h2><p> ${e.Description} </p> </article>`
   return acc
 }, "")
 )
@@ -10,4 +10,29 @@ fetch("https://fakerestapi.azurewebsites.net/api/Books")
 
 
 
-content.innerHTML = "<h1>8=========D</h1>" 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+content.innerHTML = "<h1>8====================================D</h1>" 
