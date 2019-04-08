@@ -18,11 +18,11 @@ h1{
 }
 
 h2 {
-  color : yellow ;
+  color : white ;
 }
 
 span {
-  background : red ;
+  background : black ;
   -moz-box-shadow:    3px 3px 5px 6px #0fdba4;
   -webkit-box-shadow: 3px 3px 5px 6px #0fdba4;
   box-shadow:         3px 3px 5px 6px #0fdba4;
