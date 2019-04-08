@@ -15,18 +15,21 @@ fetch('https://fakerestapi.azurewebsites.net/api/Books')
     console.log(htmlPages)
     content.innerHTML = htmlPages.shift().join('');
     pagination.onclick = () => {
-      if(htmlPages.length > 0) {
-        content.innerHTML += htmlPages.shift().join('');
-      }
-    }
-  })
-  .catch(console.error);
+			if(htmlPages.length > 0) {
+				content.innerHTML = `<img src="https://media1.tenor.com/images/7e77e0a227b7270cf65601afd5e39339/tenor.gif?itemid=12901256" class="cr7" alt="Milan Juventus Ronaldo GIF - MilanJuventus Ronaldo Happy GIFs"/>`
+      	setTimeout(function () {
+      		content.innerHTML = htmlPages.shift().join('')
+				}, 3200)
+        
+    	}
+  	}
+})
+ .catch(console.error);
 
 
 
 
 
-content.innerHTML = "<h1>Refresh</h1>"
 
 
 

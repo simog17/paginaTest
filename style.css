@@ -1,3 +1,21 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body{
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+  color: green;
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+}
+
 h2 {
   color : yellow ;
 }
@@ -15,5 +33,11 @@ button {
   text-align: center;
   display: block;
   margin: 0 auto;
+}
+
+.cr7 {
+  width: 100%;
+  height: auto;
+  margin: 20px 0;
 }
 
