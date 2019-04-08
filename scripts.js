@@ -6,9 +6,13 @@ fetch("https://fakerestapi.azurewebsites.net/api/Books")
   return acc
 }, "")
 )
+.then()
 .catch(err => {console.error(err)})
 
 
+const paginator = () => {
+
+}
 
 
 
@@ -34,5 +38,4 @@ fetch("https://fakerestapi.azurewebsites.net/api/Books")
 
 
 
-
-content.innerHTML = "<h1>8====================================D</h1>" 
+content.innerHTML = "<h1>Refresh</h1>" 
