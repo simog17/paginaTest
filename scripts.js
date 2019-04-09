@@ -1,38 +1,30 @@
-const content = document.getElementById('content')
-fetch("https://fakerestapi.azurewebsites.net/api/Books")
-.then(res => res.json())
-.then(data => content.innerHTML = data.slice(0 , 10).reduce((acc, e) => {
+
+const k = 10;
+let x = 0;
+let fullList = []
+
+const updateList = () =>{
+  const content = document.getElementById('content')
+  content.innerHTML = fullList.slice(x*k, k*(x+1)).reduce((acc, e) => {
   acc += `<article><h2><span> ${e.Title} </span></h2><p> ${e.Description} </p> </article>`
   return acc
 }, "")
-)
-.catch(err => {console.error(err)})
+}
 
 
+fetch("https://fakerestapi.azurewebsites.net/api/Books")
+.then(res => res.json())
+.then(data => {
+  fullList = data
+  updateList()
+})
+.catch(err=> {
+  console.error(err)
+})
+const next = () => {
+  x++
+  updateList()
+}
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-content.innerHTML = "<h1>8====================================D</h1>" 
+content.innerHTML = "<h1>Refresh</h1>" 
